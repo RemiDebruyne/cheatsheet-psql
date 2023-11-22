@@ -2,18 +2,18 @@
 
 ## Server
 
-`sudo systemctl start postgres` : start psql server
-`sudo systemctl stop postgres` : stop psql server
-`sudo systemctl status postgres` : check if psql server is running
+- `sudo systemctl start postgres` : start psql server
+- `sudo systemctl stop postgres` : stop psql server
+- `sudo systemctl status postgres` : check if psql server is running
 
 ## Connect to PSQL
 
-`psql [database name] [username]` : connect to the database with said username
-`sudo -i -u postgres` followed by `psql` : enter psql prompt and then connects you as `postgres` super user
+- `psql [database name] [username]` : connect to the database with said username
+- `sudo -i -u postgres` followed by `psql` : enter psql prompt and then connects you as `postgres` super user
 
 ## See infos
-`\l` : show list of 
-`\du` : show all user
+- `\l` : show list of 
+- `\du` : show all user
 
 ## Basic command
 ### Data Definition Language (DDL)
