@@ -2,9 +2,9 @@
 
 ## Server
 
-- `sudo systemctl start postgres` : start psql server
-- `sudo systemctl stop postgres` : stop psql server
-- `sudo systemctl status postgres` : check if psql server is running
+- `sudo systemctl start postgresql` : start psql server
+- `sudo systemctl stop postgresql` : stop psql server
+- `sudo systemctl status postgresql` : check if psql server is running
 
 ## Connect to PSQL
 
