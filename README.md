@@ -29,6 +29,9 @@
 - `INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);` : Inserts new data into a table.
 - `UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE c:ndition;` : Updates existing data in a table.
 - `DELETE FROM table_name WHERE condition;` : Deletes data from a table.
+- `pg_dump -U user -h localhost -d database_name -F c -f path_to_save_location` : Create a save file of your database
+- `pg_restore -U user -h localhost -d database_name -F c -f path_to_save_file` : 
+
 
 ### Data Query Language (DQL)
 - `SELECT column1, column2, ... FROM table_name;` : Selects data from a table.
