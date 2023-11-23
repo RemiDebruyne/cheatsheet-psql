@@ -10,6 +10,7 @@
 
 - `psql [database name] [username]` : connect to the database with said username
 - `sudo -i -u postgres` followed by `psql` : enter psql prompt and then connects you as `postgres` super user
+- `sudo -u postgres psql` : connect to the postgres database as the postgres user
 
 ## See infos
 - `\l` : show list of 
