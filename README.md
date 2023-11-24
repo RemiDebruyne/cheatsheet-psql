@@ -76,3 +76,5 @@ For more info on `pg_dump` : https://docs.postgresql.fr/15/app-pgdump.html
 - `psql [database] < [save file]` : Save file is the output file of `pg_dump`. Database must be created prior to the use of this command using `createdb -T template0 [database name]`
 - `pg_restore [connection option] [option] [file name]`
 
+For more info on `pg_restore`: https://docs.postgresql.fr/9.6/app-pgrestore.html
+
