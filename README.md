@@ -8,11 +8,14 @@
 ## Open PGCLI
 `pgcli [database] [username]` : open a database in pgcli
 
-## See infos
+### See infos
 - `\l` : list all database 
 - `\du` : list all user
 - `\dt` : list tables
 - `\dn` : list schema 
+
+
+
 
 ## Basic command
 ### Data Definition Language (DDL)
@@ -29,8 +32,7 @@
 - `INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);` : Inserts new data into a table.
 - `UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE c:ndition;` : Updates existing data in a table.
 - `DELETE FROM table_name WHERE condition;` : Deletes data from a table.
-- `pg_dump -U user -h localhost -d database_name -F c -f path_to_save_location` : Create a save file of your database
-- `pg_restore -U user -h localhost -d database_name -F c -f path_to_save_file` : 
+
 
 
 ### Data Query Language (DQL)
@@ -38,6 +40,9 @@
 - `SELECT DISTINCT column1, column2, ... FROM table_name;` : Selects distinct values from a table.
 - `GROUP BY` : Used with aggregate functions to group the result of a query based on one or more columns.
 - `HAVING` : Similar to WHERE, but used after GROUP BY to filter records.
+
+
+
 
 ## Advanced Commands
 
@@ -53,4 +58,21 @@
 - `AVG(column_name)` - Calculates the average value.
 - `MAX(column_name)` - Finds the maximum value.
 - `MIN(column_name)` - Finds the minimum value.
+
+### Saving and restoring
+- `pg_dump [connection option] [option] [database name]` : Create a save file of your database
+    - `-f` : Redirect the output of the save to the target file
+    - `-F` : Format of the output
+        - `p` : SQL script file (default value)
+        - `c` : Personnalized archive, usable by `pg_restore` and most flexible format
+        - `d` : Create a directory usable by `pg_restore`. One directory with a file is create per tables
+    - `-a` : Only save data (data tables, large objects and sequence values) not schema
+    - `-n` : Save schema and its data
+    - `-s` : Only save schema, not any data related to it 
+    - `-U` : Define the user used to connect to the data base
+
+For more info on `pg_dump` : https://docs.postgresql.fr/15/app-pgdump.html
+
+- `psql [database] < [save file]` : Save file is the output file of `pg_dump`. Database must be created prior to the use of this command using `createdb -T template0 [database name]`
+- `pg_restore [connection option] [option] [file name]`
 
