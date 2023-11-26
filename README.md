@@ -22,6 +22,8 @@
 - `CREATE DATABASE database_name;` : Creates a new database.
 - `CREATE TABLE table_name (...);` : Creates a new table.
 - `ALTER TABLE table_name ...;` : Modifies an existing table.
+    - `ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL` : Add constraint NOT NULL to the column
+    - `ALTER TABLE table_name ALTER COLUMN column_name ADD [options CHECK || UNIQUE || FOREIGN KEY]` : Add a constraint to the column
 - `DROP TABLE table_name;` : Deletes a table.
 - `DROP DATABASE database_name;` : Deletes a database.
 - `CREATE SCHEMA schema_name;` : create a schema
